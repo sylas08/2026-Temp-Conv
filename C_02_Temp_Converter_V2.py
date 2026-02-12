@@ -89,10 +89,10 @@ class Converter():
                 error = ""
                 self.convert(min_temp, to_convert)
             else:
-                error = "Too Low"
+                has_errors = "yes"
 
         except ValueError:
-            error = "Please enter a number"
+            has_errors = "yes"
 
         # display the error if necessary
         if error != "":
