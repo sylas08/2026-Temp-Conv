@@ -16,7 +16,7 @@ class Converter:
         self.temp_frame.grid()
 
         self.to_history_button = Button(self.temp_frame,
-                                     text="Help / Info",
+                                     text="History / Export",
                                      bg="#CC6600",
                                      fg="#FFFFFF",
                                      font=("Arial", 14, "bold"), width=12,
@@ -51,7 +51,7 @@ class HistoryExport:
         # if users press cross at top, closes history and
         # 'releases' history button
         self.history_box.protocol('WM_DELETE_WINDOW',
-                               partial(self.close_history(), partner))
+                               partial(self.close_history, partner))
 
         self.history_frame = Frame(self.history_box)
         self.history_frame.grid()
@@ -107,13 +107,13 @@ class HistoryExport:
                                       command=btn[2])
             self.make_button.grid(row=btn[3], column=btn[4], padx=10, pady=10)
 
-
+        
 
     def close_history(self, partner):
         """
-        Closes history dialogue box (and enables history button)
+        Closes help dialogue box (and enables help button)
         """
-        # Put history button back to normal
+        # Put help button back to normal
         partner.to_history_button.config(state=NORMAL)
         self.history_box.destroy()
 
