@@ -68,7 +68,7 @@ class Converter():
             self.button_ref_list.append(self.make_button)
 
         #retrieve to_help button
-        self.to_history_button = self.button_ref_list[2]
+        self.to_help_button = self.button_ref_list[2]
 
         # retrieve 'history / export' button and disable it at the start
         self.to_history_button = self.button_ref_list[3]
